@@ -1,0 +1,51 @@
+.beautiful {
+  padding-top: 100px;
+  margin-bottom: 100px;
+  @include media(1300) {
+    display: none;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__img {
+    width: 50%;
+    height: 679px;
+    overflow: hidden;
+    border-radius: 40px;
+    flex: 0 0 50%;
+    position: relative;
+
+    &-text {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      max-width: 344px;
+      width: 100%;
+      background: #00000033;
+      padding: 12px 24px;
+      border-radius: 30px;
+      height: 294px;
+      font-family: "Raleway", sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+      color: #eeeef1;
+    }
+
+    & img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

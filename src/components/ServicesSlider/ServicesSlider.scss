@@ -1,0 +1,196 @@
+@import "src/assets/scss/Mixin.scss";
+
+.main__serviceslider {
+  padding-top: 100px;
+  margin-bottom: 100px;
+
+  @include media(992) {
+    padding-top: 50px;
+    margin-bottom: 50px;
+  }
+  &-item {
+    display: flex;
+    gap: 24px;
+
+    @include media(800) {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    @include media(360) {
+      flex-direction: column;
+      gap: 30px;
+    }
+    &-content {
+      position: relative;
+      &-title {
+        max-width: 321px;
+        width: 100%;
+        margin-bottom: 24px;
+        color: var(--color-text-main);
+        font-family: "Raleway";
+        font-size: clamp(2.25rem, 1.379rem + 4.36vw, 5rem);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        @include media(360) {
+          max-width: 145px;
+        }
+      }
+      &-text {
+        width: 416px;
+        display: flex;
+        flex-direction: column;
+        gap: 47px;
+
+        @include media(360) {
+          width: 328px;
+          gap: 23px;
+        }
+        & p {
+          color: var(--color-text-accent);
+          font-family: "Raleway";
+          font-size: clamp(1rem, 0.921rem + 0.4vw, 1.25rem);
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%;
+        }
+      }
+    }
+
+    &-slider {
+      width: 100%;
+      &-slide {
+        width: 100%;
+        height: 600px;
+        position: relative;
+        border-radius: 40px;
+        overflow: hidden;
+
+        @include media(610) {
+          height: 460px;
+        }
+        @include media(320) {
+          height: 350px;
+        }
+        &-overlaygradient {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            0deg,
+            rgba(163, 200, 242, 0.2) 0%,
+            rgba(163, 200, 242, 0.2) 100%
+          );
+        }
+
+        &-img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        &-title {
+          position: absolute;
+          left: 30px;
+          top: 30px;
+          max-width: 250px;
+          width: 100%;
+          color: var(--color-bg-main);
+          font-family: "Raleway";
+          font-size: clamp(1.5rem, 1.262rem + 1.19vw, 2.25rem);
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-transform: uppercase;
+          margin-bottom: 26px;
+
+          @include media(360) {
+            top: 24px;
+            left: 24px;
+          }
+        }
+
+        &-btn {
+          position: absolute;
+          left: 30px;
+          top: 140px;
+          width: max-content;
+          height: 48px;
+          border-radius: 10px;
+          border: 1px solid var(--color-bg-main);
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(25px);
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: var(--color-bg-main);
+          font-family: "Raleway";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-transform: uppercase;
+          transition: 0.3s;
+          @media (hover: hover) {
+            &:hover {
+              background: rgba(0, 0, 0, 0.1);
+              backdrop-filter: blur(25px);
+            }
+          }
+
+          & svg {
+            fill: var(--color-bg-main);
+          }
+          @include media(360) {
+            top: 96px;
+          }
+        }
+      }
+
+      &-btns {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        &-prev,
+        &-next {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 500px;
+          border: 2px solid var(--color-text-btn);
+          padding: 14px;
+          width: 56px;
+          height: 56px;
+          font-size: 18px;
+          transition: 0.3s;
+
+          & svg {
+            transition: 0.3s;
+            stroke: var(--color-text-btn);
+          }
+          @media (hover: hover) {
+            &:hover {
+              background: var(--color-text-btn);
+              & svg {
+                stroke: var(--color-bg-main);
+              }
+            }
+          }
+        }
+
+        @include media(500) {
+          display: none;
+        }
+      }
+    }
+  }
+}

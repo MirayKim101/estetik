@@ -1,0 +1,65 @@
+body.visually-impaired {
+  color: #000 !important;
+  background-color: var(--color-bg-main) !important;
+  font-size: 18px !important;
+
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    outline: none !important;
+  }
+
+  a,
+  button {
+    color: #0000ee !important;
+    text-decoration: underline !important;
+    background-color: transparent !important;
+  }
+
+  a:hover,
+  a:focus,
+  button:hover,
+  button:focus {
+    background-color: yellow !important;
+    color: #000 !important;
+
+    & span {
+      color: #000 !important;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold !important;
+    color: #d31717 !important;
+  }
+
+  input,
+  select,
+  button,
+  textarea {
+    border: 2px solid #000 !important;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    background-color: #eee !important;
+  }
+
+  ul,
+  ol {
+    list-style-type: disc !important;
+    list-style-type: decimal !important;
+
+    ::before,
+    ::after {
+      visibility: hidden !important;
+    }
+  }
+}

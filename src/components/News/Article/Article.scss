@@ -1,0 +1,194 @@
+.article {
+  &__top {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @include media(992) {
+      padding-top: 50px;
+      margin-bottom: 30px;
+    }
+    &-title {
+      color: var(--color-text-main);
+      font-family: "Raleway";
+      font-size: clamp(2.25rem, 1.197rem + 4.68vw, 5rem);
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      @include media(480) {
+        gap: 100px;
+      }
+      &-img {
+        width: 100%;
+        height: 95px;
+        border-radius: 40px;
+        overflow: hidden;
+        & img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          object-fit: cover;
+        }
+      }
+
+      &-info {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @include media(480) {
+          flex-direction: column;
+          gap: 16px;
+        }
+        &-title {
+          max-width: 526px;
+          width: 100%;
+          color: var(--color-text-main);
+          font-family: "Raleway";
+          font-size: clamp(1rem, 0.521rem + 2.13vw, 2.25rem);
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-transform: uppercase;
+          @include media(480) {
+            max-width: 214px;
+            width: 100%;
+            line-height: 25px;
+          }
+        }
+        &-category {
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+          align-items: flex-end;
+          @include media(480) {
+            align-items: flex-start;
+            gap: 16px;
+          }
+          &-title {
+            width: max-content;
+            padding: 10px;
+            border-radius: 100px;
+            background: var(--color-text-pink);
+            color: var(--color-bg-main);
+            text-align: center;
+            font-family: "Raleway";
+            font-size: clamp(0.75rem, 0.559rem + 0.85vw, 1.25rem);
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+
+            @include media(480) {
+              padding: 4px 8px;
+              background: var(--color-bg-pink);
+              color: var(--color-text-pink);
+            }
+          }
+
+          &-date {
+            color: var(--color-text-accent);
+            font-family: "Raleway";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+    }
+  }
+
+  &__body {
+    padding-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    @include media(992) {
+      padding-top: 0;
+      margin-bottom: 50px;
+    }
+    @include media(600) {
+      gap: 30px;
+    }
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      @include media(600) {
+        gap: 30px;
+      }
+      &-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        @include media(600) {
+          gap: 30px;
+        }
+      }
+      &-img {
+        width: 100%;
+        height: 100%;
+
+        & svg {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
+
+      &-text {
+        & h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          padding-top: 50px;
+          margin-bottom: 30px;
+          font-family: "montserrat";
+          font-size: clamp(1rem, 0.521rem + 2.13vw, 2.25rem);
+          color: var(--color-text-main);
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-transform: uppercase;
+          @include media(600) {
+            padding-top: 16px;
+            margin-bottom: 16px;
+          }
+        }
+        width: 100%;
+        width: 100%;
+        color: var(--color-text-accent);
+        font-family: "Raleway";
+        font-size: clamp(1rem, 0.904rem + 0.43vw, 1.25rem);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        & ul,
+        ol {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        & li {
+          & strong {
+            font-weight: 700;
+            font-family: "Raleway";
+          }
+        }
+      }
+    }
+  }
+}

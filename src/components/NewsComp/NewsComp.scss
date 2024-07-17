@@ -1,0 +1,62 @@
+.newscomp {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 100px;
+  margin-bottom: 100px;
+
+  @include media(992) {
+    padding-top: 50px;
+    margin-bottom: 50px;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &-title {
+      font-family: "Raleway", sans-serif;
+      font-size: clamp(2.25rem, 1.379rem + 4.36vw, 5rem);
+      font-weight: 700;
+      line-height: 94px;
+      color: var(--color-text-main);
+      text-transform: uppercase;
+    }
+
+    & a {
+      width: 48px;
+      height: 48px;
+      background: var(--color-bg-main);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s;
+      & svg {
+        transition: 0.3s;
+        fill: var(--color-text-main);
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          background: var(--color-text-btn);
+          & svg {
+            fill: var(--color-bg-main);
+          }
+        }
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    @include media(480) {
+      justify-content: center;
+    }
+  }
+}

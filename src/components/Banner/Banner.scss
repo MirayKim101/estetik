@@ -1,0 +1,94 @@
+@import "@/assets/scss/Mixin.scss";
+
+.banner {
+  margin-top: 30px;
+  margin-bottom: 100px;
+  width: 100%;
+  height: 688px;
+  background: var(--color-bg-main);
+  padding: 40px;
+  border-radius: 40px;
+  @include media(992) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  @include media(830) {
+    padding: 15px;
+    height: 480px;
+  }
+
+  @include media(550) {
+    padding: 0;
+    height: 400px;
+  }
+  &__slider {
+    width: 100%;
+    height: 100%;
+    &-slide {
+      position: relative;
+      height: 100%;
+      border-radius: 40px;
+      overflow: hidden;
+      &-img {
+        width: 100%;
+        height: 100%;
+        & img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          object-fit: cover;
+        }
+      }
+
+      &-content {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 30px;
+        padding: 0 30px;
+        z-index: 100;
+        @include media(1100) {
+          flex-direction: column-reverse;
+          align-items: flex-start;
+          top: 30px;
+        }
+
+        @include media(830) {
+          top: 15px;
+          bottom: 15px;
+          padding: 0 15px;
+        }
+        &-title {
+          max-width: 380px;
+          width: 100%;
+          color: var(--color-bg-main);
+          font-family: "Raleway";
+          font-size: clamp(1.5rem, 0.734rem + 3.4vw, 3.5rem);
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-transform: uppercase;
+        }
+        &-text {
+          max-width: 344px;
+          width: 100%;
+          height: auto;
+          padding: 12px 24px;
+          border-radius: 20px;
+          background: rgba(0, 0, 0, 0.2);
+          backdrop-filter: blur(15px);
+          & p {
+            color: var(--color-bg-main);
+            font-family: "Raleway";
+            font-size: clamp(0.75rem, 0.559rem + 0.85vw, 1.25rem);
+            font-style: normal;
+            font-weight: 500;
+            line-height: 25px;
+          }
+        }
+      }
+    }
+  }
+}

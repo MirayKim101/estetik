@@ -1,0 +1,390 @@
+@import "@/assets/scss/Mixin.scss";
+
+.main__about {
+  &-img {
+    padding-top: 100px;
+    margin-bottom: 100px;
+    @include media(992) {
+      padding-top: 50px;
+      margin-bottom: 50px;
+    }
+    &-wrapper {
+      height: 600px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      border-radius: 40px;
+
+      @include media(900) {
+        height: 500px;
+      }
+
+      @include media(772) {
+        height: 350px;
+      }
+
+      @include media(640) {
+        height: 280px;
+      }
+
+      @include media(550) {
+        height: 200px;
+      }
+
+      @include media(360) {
+        height: 152px;
+      }
+
+      &-title {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        & p {
+          color: var(--color-bg-main);
+          font-family: "Raleway";
+          font-size: clamp(1.5rem, 0.201rem + 5.77vw, 5rem);
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-transform: uppercase;
+        }
+
+        @include media(900) {
+          top: 16px;
+          left: 16px;
+        }
+      }
+
+      &-content {
+        width: 100%;
+        height: 100%;
+
+        &-video {
+          width: 100%;
+          height: 100%;
+
+          & video {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+          }
+        }
+
+        &-img {
+          width: 100%;
+          height: 100%;
+
+          & img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+
+  &-text {
+    padding-top: 100px;
+    margin-bottom: 100px;
+    @include media(992) {
+      padding-top: 50px;
+      margin-bottom: 50px;
+    }
+    &-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      &-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 55px;
+        max-width: 741px;
+        width: 100%;
+
+        @include media(360) {
+          gap: 24px;
+          max-width: 328px;
+          width: 100%;
+        }
+        & p {
+          color: var(--color-text-accent);
+          font-family: "Raleway";
+          font-size: clamp(1rem, 0.907rem + 0.41vw, 1.25rem);
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+
+  &-wrapper {
+    padding-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+    @include media(992) {
+      padding-top: 50px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &-slider {
+    width: 100%;
+    margin-bottom: 50px;
+    @include media(992) {
+      margin-bottom: 30px;
+    }
+
+    &-slide {
+      width: 100%;
+      border-radius: 40px;
+      overflow: hidden;
+
+      &-img {
+        width: 100%;
+        height: 600px;
+        border-radius: 40px;
+        overflow: hidden;
+
+        @include media(992) {
+          height: 400px;
+          border-radius: 20px;
+        }
+
+        @include media(768) {
+          height: 350px;
+          border-radius: 20px;
+        }
+        @include media(360) {
+          height: 153px;
+          border-radius: 20px;
+        }
+        & img {
+          width: 100%;
+          height: 150%;
+          display: block;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &-title {
+      color: var(--color-text-main);
+      font-family: "Raleway";
+      font-size: clamp(2.25rem, 1.379rem + 4.36vw, 5rem);
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+      @include media(360) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &-switcher {
+      padding: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      max-width: 463px;
+      width: 100%;
+      margin-bottom: 36px;
+      @include media(360) {
+        max-width: 328px;
+        width: 100%;
+        margin-bottom: 95px;
+      }
+      &-btn {
+        color: var(--color-text-btn);
+        text-align: center;
+        font-family: "Raleway";
+        font-size: clamp(1rem, 0.921rem + 0.4vw, 1.25rem);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        border-radius: 100px;
+        background: var(--color-bg-main);
+        padding: 10px;
+        transition: 0.3s;
+        @include media(360) {
+          padding: 8px 4px;
+        }
+        &.active {
+          background: var(--color-text-btn);
+          color: var(--color-bg-main);
+        }
+
+        @media (hover: hover) {
+          &:hover {
+            background: var(--color-text-btn);
+            color: var(--color-bg-main);
+          }
+        }
+      }
+    }
+
+    &-btns {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      @include media(428) {
+        display: none;
+      }
+      &-prev,
+      &-next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 500px;
+        border: 2px solid var(--color-text-btn);
+        padding: 14px;
+        width: 56px;
+        height: 56px;
+        font-size: 18px;
+        transition: 0.3s;
+
+        & svg {
+          transition: 0.3s;
+          stroke: #97a3ff;
+        }
+
+        @media (hover: hover) {
+          &:hover {
+            background: var(--color-text-btn);
+            & svg {
+              stroke: var(--color-bg-main);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-licenses {
+    padding-top: 100px;
+    margin-bottom: 100px;
+    @include media(992) {
+      padding-top: 50px;
+      margin-bottom: 50px;
+    }
+    &-title {
+      max-width: 847px;
+      width: 100%;
+      color: var(--color-text-main);
+      font-family: "Raleway";
+      font-size: clamp(2.25rem, 1.379rem + 4.36vw, 5rem);
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+      margin-bottom: 50px;
+      @include media(740) {
+        margin-bottom: 30px;
+      }
+
+      @include media(360) {
+        max-width: 328px;
+        width: 100%;
+      }
+    }
+
+    &-slider {
+      width: 100%;
+      &-slide {
+        max-width: 236px;
+        width: 100%;
+        height: 331px;
+        border-radius: 20px;
+        overflow: hidden;
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+      }
+    }
+
+    &-images {
+      max-width: 1140px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+
+      &-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+
+        &-close {
+          position: absolute;
+          top: 30px;
+          right: 30px;
+          stroke: var(--color-bg-main);
+        }
+
+        &-content {
+          transform: scale(0.3);
+          @include media(740) {
+            transform: scale(0.5);
+          }
+          @include media(570) {
+            transform: scale(0.7);
+          }
+          @include media(412) {
+            transform: scale(0.8);
+          }
+          @include media(360) {
+            transform: scale(0.9);
+          }
+
+          & img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      &-img {
+        max-width: 150px;
+        width: 100%;
+        height: 211px;
+        border-radius: 20px;
+        overflow: hidden;
+
+        &-large {
+          max-width: 306px;
+          width: 100%;
+          height: 431px;
+          @include media(740) {
+            max-width: 150px;
+            width: 100%;
+            height: 211px;
+          }
+        }
+
+        & img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

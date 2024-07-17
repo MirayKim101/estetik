@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(@assets/fonts/Montserrat/Montserrat-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(@assets/fonts/Inter/Inter-SemiBold.ttf) format("truetype");
+  font-weight: 400;
+}
+
+$Poppins: ("Regular", 400), ("SemiBold", 600);
+
+@each $name, $weight in $Poppins {
+  @font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins/Poppins-#{$name}.ttf) format("truetype");
+    font-weight: $weight;
+  }
+}
+
+$Raleway: ("Bold", 700), ("Medium", 500), ("MediumItalic", 501), ("Italic", 401),
+  ("Regular", 400);
+
+@each $name, $weight in $Raleway {
+  @font-face {
+    font-family: "Raleway";
+    src: url(../fonts/Raleway/Raleway-#{$name}.ttf) format("truetype");
+    font-weight: $weight;
+  }
+}
