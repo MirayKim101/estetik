@@ -188,7 +188,7 @@
               <li class="footer__wrapper-menu-nav-inner-list-item">
                 <a
                   target="_blank"
-                  href="https://disk.yandex.ru/i/kjdTbY6r3EB7-g"
+                  href="https://disk.yandex.ru/d/K5HSd9jPpL8n7w"
                   class="footer__wrapper-menu-nav-inner-list-item-link"
                 >
                   Полный прайс услуг
@@ -212,7 +212,7 @@
           <a
             target="_blank"
             class="footer__wrapper-menu-btns-price"
-            href="https://disk.yandex.ru/i/kjdTbY6r3EB7-g"
+            href="https://disk.yandex.ru/d/K5HSd9jPpL8n7w"
           >
             скачать прайс лист
             <img
